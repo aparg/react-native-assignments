@@ -77,6 +77,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#5D89EE',
   },
   content: {
+    fontFamily: 'RussoOne-Regular',
     color: '#fff',
     alignSelf: 'center',
   },
