@@ -4,6 +4,7 @@ This project includes implementation of basic react native concepts like dimensi
 
 # Screenshots 📱
 
+![image](./Screenshots//Screenshot_2023-07-28-13-09-57-240_com.reactnativeassignments.jpg)
 ![image](./Screenshots/Screenshot_2023-07-27-13-59-23-440_com.reactnativeassignments.jpg)
 ![image](./Screenshots/Screenshot_2023-07-27-13-59-50-062_com.reactnativeassignments.jpg)
 ![image](./Screenshots/Screenshot_2023-07-27-13-59-30-972_com.reactnativeassignments.jpg)
