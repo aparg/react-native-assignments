@@ -15,65 +15,72 @@ const Drawer = createDrawerNavigator();
 
 const MyDrawer = () => {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator
-        screenOptions={{headerShown: false}}
-        initialRouteName="HomeScreen"
-        useLegacyImplementation={false}>
-        <Drawer.Screen
-          name="HomeScreen"
-          component={Main}
-          // options={{title: 'HomeScreen'}}
-        />
-        <Drawer.Screen
-          name="Dimension"
-          component={Dimension}
-          // options={{title: 'Dimension'}}
-        />
+    <Drawer.Navigator
+      screenOptions={{headerShown: false}}
+      initialRouteName="HomeScreen"
+      useLegacyImplementation={false}>
+      <Drawer.Screen
+        options={{title: 'HomeScreen', headerShown: true}}
+        name="HomeScreen"
+        component={Main}
+      />
 
-        <Drawer.Screen
-          name="FetchData"
-          component={FetchData}
-          // options={{title: 'FetchData'}}
-        />
+      <Drawer.Screen
+        options={{swipeEnabled: false}}
+        name="Dimension"
+        component={Dimension}
+        // options={{title: 'Dimension'}}
+      />
 
-        <Drawer.Screen
-          name="Counter"
-          component={Counter}
-          // options={{title: 'Counter'}}
-        />
+      <Drawer.Screen
+        options={{swipeEnabled: false}}
+        name="FetchData"
+        component={FetchData}
+        // options={{title: 'FetchData'}}
+      />
 
-        <Drawer.Screen
-          name="Timer"
-          component={Timer}
-          // options={{title: 'Timer'}}
-        />
+      <Drawer.Screen
+        options={{swipeEnabled: false}}
+        name="Counter"
+        component={Counter}
+        // options={{title: 'Counter'}}
+      />
 
-        <Drawer.Screen
-          name="ItemList"
-          component={ItemList}
-          // options={{title: 'Counter'}}
-        />
+      <Drawer.Screen
+        options={{swipeEnabled: false}}
+        name="Timer"
+        component={Timer}
+        // options={{title: 'Timer'}}
+      />
 
-        <Drawer.Screen
-          name="FlatItemsList"
-          component={FlatItemsList}
-          // options={{title: 'FlatItemsList'}}
-        />
+      <Drawer.Screen
+        options={{swipeEnabled: false}}
+        name="ItemList"
+        component={ItemList}
+        // options={{title: 'Counter'}}
+      />
 
-        <Drawer.Screen
-          name="AsyncStorageKeyValue"
-          component={AsyncStorageKeyValue}
-          // options={{title: 'AsyncStorageKeyValue'}}
-        />
+      <Drawer.Screen
+        options={{swipeEnabled: false}}
+        name="FlatItemsList"
+        component={FlatItemsList}
+        // options={{title: 'FlatItemsList'}}
+      />
 
-        <Drawer.Screen
-          name="ActivityIndicator"
-          component={ActivityIndication}
-          // options={{title: 'ActivityIndication'}}
-        />
-      </Drawer.Navigator>
-    </NavigationContainer>
+      <Drawer.Screen
+        options={{swipeEnabled: false}}
+        name="AsyncStorageKeyValue"
+        component={AsyncStorageKeyValue}
+        // options={{title: 'AsyncStorageKeyValue'}}
+      />
+
+      <Drawer.Screen
+        options={{swipeEnabled: false}}
+        name="ActivityIndicator"
+        component={ActivityIndication}
+        // options={{title: 'ActivityIndication'}}
+      />
+    </Drawer.Navigator>
   );
 };
 

@@ -54,9 +54,10 @@ const FlatItemsList = item => {
         data={paginatedList}
         renderItem={renderItem}
         keyExtractor={item => item.name}
+        onEndReached={loadMore}
         // horizontal={true}
       />
-      <Pressable
+      {/* <Pressable
         onPress={() => loadMore()}
         style={({pressed}) => [
           {
@@ -65,7 +66,7 @@ const FlatItemsList = item => {
           styles.loadMorePressable,
         ]}>
         <Text>Load More...</Text>
-      </Pressable>
+      </Pressable> */}
     </View>
   );
 };
