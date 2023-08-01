@@ -65,7 +65,7 @@ function Counter() {
   );
 }
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   main: {
     backgroundColor: '#5D89EE',
     height: '100%',

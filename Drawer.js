@@ -9,6 +9,7 @@ import AsyncStorageKeyValue from './components/AsyncStorageKeyValue';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import Dimension from './components/Dimension';
 import ActivityIndication from './components/ActivityIndication';
+import TabNavigator from './TabNavigator';
 import {NavigationContainer} from '@react-navigation/native';
 
 const Drawer = createDrawerNavigator();
@@ -17,13 +18,19 @@ const MyDrawer = () => {
   return (
     <Drawer.Navigator
       screenOptions={{headerShown: false}}
-      initialRouteName="HomeScreen"
+      initialRouteName="Home"
       useLegacyImplementation={false}>
       <Drawer.Screen
+        options={{headerShown: true}}
+        name="Home"
+        component={TabNavigator}
+        // options={{title: 'Dimension'}}
+      />
+      {/* <Drawer.Screen
         options={{title: 'HomeScreen', headerShown: true}}
         name="HomeScreen"
         component={Main}
-      />
+      /> */}
 
       <Drawer.Screen
         options={{swipeEnabled: false}}

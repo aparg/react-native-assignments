@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+import {Alert} from 'react-native';
 import {
   View,
   Text,
@@ -11,6 +12,7 @@ import TopicDisplayer from './TopicDisplayer';
 const FetchData = () => {
   const [data, setData] = useState([]);
   const [loadingMoreData, setLoadingMoreData] = useState(false);
+  const [endReached, setEndReached] = useState(false);
 
   useEffect(() => {
     fetch(`https://jsonplaceholder.typicode.com/posts?_start=0 &_limit=10`)
@@ -29,6 +31,22 @@ const FetchData = () => {
       .then(res => res.json())
       .then(resJson => {
         setLoadingMoreData(false);
+        if (resJson.length === 0) {
+          //when all items have been fetched
+          setEndReached(true);
+          Alert.alert(
+            'End of List',
+            'No more data to be fetched',
+            [
+              {
+                text: 'OK',
+              },
+            ],
+            {
+              cancelable: true,
+            },
+          );
+        }
         setData([...data, ...resJson]);
       })
       .catch(err => console.log(err));
@@ -62,7 +80,7 @@ const FetchData = () => {
             data={data}
             renderItem={renderItem}
             keyExtractor={item => item.id}
-            onEndReached={loadMore}
+            onEndReached={() => !endReached && !loadingMoreData && loadMore()}
           />
         ) : (
           <ActivityIndicator size="large" color="#fff" />

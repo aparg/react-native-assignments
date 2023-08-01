@@ -10,20 +10,21 @@ import AsyncStorageKeyValue from './components/AsyncStorageKeyValue';
 import Dimension from './components/Dimension';
 import ActivityIndication from './components/ActivityIndication';
 import Drawer from './Drawer';
+// import TabNavigator from './TabNavigator';
 
 const Stack = createStackNavigator();
 
 const MyStack = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: true}}>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen
           options={{headerShown: false}}
           name="Drawer"
           component={Drawer}
           // options={{title: 'Dimension'}}
         />
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Dimension"
           component={Dimension}
           // options={{title: 'Dimension'}}
@@ -69,7 +70,7 @@ const MyStack = () => {
           name="ActivityIndicator"
           component={ActivityIndication}
           // options={{title: 'ActivityIndication'}}
-        />
+        /> */}
       </Stack.Navigator>
     </NavigationContainer>
   );
